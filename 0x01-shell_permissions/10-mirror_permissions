@@ -2,3 +2,4 @@
 chmod  --reference=olleh hello
 chmod  -R -X . 
 chmod  -R -X . 
+chown  -h vincent_hello
