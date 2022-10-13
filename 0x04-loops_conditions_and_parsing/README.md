@@ -121,6 +121,10 @@
    - You must use the while loop (for and until are forbidden)
 
 12. Tell the story
+
+
+
+
 ![ALT](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/03ca27392c6338e696fc0c3b08765f02c98457a1.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221013%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221013T124422Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=16dfe6572ebc58bd56e2c255825d5b164cd1226d59a77f298da2e184a1273942)
 
 Read:
@@ -133,6 +137,9 @@ Read:
    - You must use the while loop (for and until are forbidden)
 
 13. Let's parse Apache logs
+
+
+
 ![ALT](https://alx-intranet.hbtn.io/images/contents/sysadmin/projects/80/such_awk.jpg)
 - Apache is among the most popular web servers in the world, serving 50% of all active websites, no doubt that you will have to interact with it within your career.
 - As a Full-Stack Software Engineer, you have to master the art of parsing log files. Today we will do a simple parsing of Apache log access files.
