@@ -125,7 +125,7 @@
 
 
 
-![ALT](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/03ca27392c6338e696fc0c3b08765f02c98457a1.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221013%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221013T124422Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=16dfe6572ebc58bd56e2c255825d5b164cd1226d59a77f298da2e184a1273942)
+![ALT](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/03ca27392c6338e696fc0c3b08765f02c98457a1.jpg)
 
 Read:
    - IFS (internal field separator)
