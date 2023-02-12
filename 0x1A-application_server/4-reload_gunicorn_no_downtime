@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Get the PID of the Gunicorn master process
+pid=$(ps -ef | grep gunicorn | grep master | awk '{print $2}')
+
+# Send the HUP signal to the master process, which triggers a graceful reload
+kill -HUP $pid
+
+# Check if the reload was successful
+if [ $? -eq 0 ]; then
+  echo "Gunicorn reloaded successfully"
+else
+  echo "Failed to reload Gunicorn"
+  exit 1
+fi
