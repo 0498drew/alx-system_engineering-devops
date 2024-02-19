@@ -1,6 +1,6 @@
 # Design a one server web infrastructure that hosts the website www.foobar.com
 ## start your explanation by having a user wanting to access your website
-![ALt text](https://imgur.com/8aWZGEP)
+[ALt text](https://imgur.com/8aWZGEP)
 
 * Server: This is a physical or virtual machine responsible for hosting all components of the web infrastructure.
 
