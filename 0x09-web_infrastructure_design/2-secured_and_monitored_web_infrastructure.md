@@ -1,4 +1,4 @@
-![image](https://docs.google.com/document/d/1IuBJS1lNW3Spc06Bdcep8ZwoQ2CjQB8_NGMSGoLMZmg/edit?usp=sharing)
+![2-secured_and_monitored_web_infrastructure image url](https://imgur.com/6QxpfTu)
 ## Components:
 
 ### Firewalls (3):
