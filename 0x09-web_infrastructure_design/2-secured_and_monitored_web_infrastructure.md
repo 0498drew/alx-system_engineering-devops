@@ -1,4 +1,4 @@
-![image](https://imgur.com/a/zje0cnu)
+![image](https://docs.google.com/document/d/1IuBJS1lNW3Spc06Bdcep8ZwoQ2CjQB8_NGMSGoLMZmg/edit?usp=sharing)
 ## Components:
 
 ### Firewalls (3):
