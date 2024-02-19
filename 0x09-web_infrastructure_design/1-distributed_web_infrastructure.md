@@ -1,5 +1,5 @@
 # Design a three server web infrastructure that hosts the website www.foobar.com
-![image](https://imgur.com/BHster)
+[1-distributed_web infrastucture image url](https://imgur.com/BHster)
 ## Components:
 
 ### Load Balancer (HAproxy):
