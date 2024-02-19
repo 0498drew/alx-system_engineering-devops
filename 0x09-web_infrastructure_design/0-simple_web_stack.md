@@ -20,7 +20,7 @@
 * Database: The database stores and manages the website's data. MySQL, in this case, handles tasks such as storing user information, product details, and other relevant data.
 * Communication: The server communicates with the user's computer over the internet using the HTTP(S) protocol. When a user requests the website www.foobar.com, their browser sends an HTTP request to the server's IP address. The server processes this request, retrieves necessary data from the database, executes any dynamic code, and sends back an HTTP response containing the requested webpage.
 
-##Issues with the Infrastructure:
+## Issues with the Infrastructure:
 
 * Single Point of Failure (SPOF): Since all components are hosted on a single server, if the server fails, the entire website goes down.
 * Downtime during Maintenance: Performing maintenance tasks, such as deploying new code or restarting the web server, may lead to downtime, causing inconvenience to users.
