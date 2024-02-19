@@ -1,35 +1,43 @@
 # Design a three server web infrastructure that hosts the website www.foobar.com
+![image](https://imgur.com/BHster)
+## Components:
 
-## Must have
-* 2 servers
-* 1 web server (Nginx)
-* 1 application server
-* 1 application server
-* 1 load-balancer (HAproxy)
-* 1 set of application files (code base)
-* 1 database (MySQL)
+### Load Balancer (HAproxy):
+  * Purpose: Distribute incoming traffic evenly across multiple servers for load balancing and high availability.
+  * Distribution Algorithm: Round Robin (Simple and efficient method, distributes requests equally among servers in a circular manner).
+  * Active-Active Setup: Both servers are actively serving traffic, distributing the load and providing redundancy in case of failure.
 
-## Questions
+### Web Server (Nginx):
+  * Purpose: Serve static content, handle incoming HTTP requests, and act as a reverse proxy for dynamic content.
+  * Active-Active Setup: Both servers are actively serving requests.
 
-* Why did we add each additional element?
-    load balancer to handle traffic and another server so that we dont have a single point of failure there any more
-* What distribution algorithm your load balancer is configured with and how it works?
-    round robin  or static round robin or source?
-* Is your load-balancer enabling an Active-Active or Active-Passive setup? Explain the difference.
- active-active is when both running at the same time equally distributing info
- active-passive only one at a time and the other goes on line when needed
-* How a database Primary-Replica (Master-Slave) cluster works?
-    Master can read and write and slave can only read
-* What is the difference between the primary node and the Replica node in regards to the application
+### Application Server:
+  * Purpose: Execute server-side code, process dynamic content requests from the web server, and communicate with the database.
+  * Active-Active Setup: Both servers are actively processing application logic and handling requests.
 
+### Set of Application Files (Code Base):
+  * Purpose: Contains the application code to be executed on the application servers.
 
-## What are the issues with this infrastructure?
+### Database (MySQL):
+  * Purpose: Store and manage website data.
+  * Primary-Replica (Master-Slave) Cluster: Primary node handles both read and write operations, while replica nodes replicate data from the primary node to provide redundancy and handle read-only queries.
 
-* Where are SPOF?
-    the load balancer
-* Security isses? (no firewall, no HTTPS)
-    no firewalls and https so user data is not safe
-* no monitoring?
-    monitoring catches possible errors or problems
+## Specifics:
 
-[URL to design of a three server web infrastructure](https://imgur.com/a/zje0cnu)
+* Load Balancer Algorithm: Round Robin - Distributes requests evenly among servers, preventing any single server from becoming overwhelmed.
+* Database Primary-Replica Cluster: Primary node handles write operations, ensuring data consistency, while replica nodes handle read operations, offloading read traffic from the primary node and providing fault tolerance.
+
+### Difference between Primary and Replica Nodes:
+* Primary Node: Handles write operations and serves as the authoritative source for data modifications.
+* Replica Node: Replicates data from the primary node and serves read-only queries, reducing the load on the primary node and providing fault tolerance.
+
+## Issues with the Infrastructure:
+
+### Single Points of Failure (SPOF):
+* The absence of redundancy in critical components like the load balancer, web server, application server, and database creates single points of failure.
+
+### Security Issues:
+* Lack of firewall exposes the infrastructure to potential attacks.
+* Absence of HTTPS encryption leaves data vulnerable to interception and manipulation.
+###No Monitoring:
+* Without monitoring tools, it's challenging to detect and troubleshoot issues promptly, leading to potential downtime and performance degradation.

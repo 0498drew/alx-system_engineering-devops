@@ -1,37 +1,27 @@
 # Design a one server web infrastructure that hosts the website www.foobar.com
 ## start your explanation by having a user wanting to access your website
+![image](https://imgur.com/8aWZGEP)
 
-## you must have
-* 1 server
-* 1 web server (Nginx)
-* 1 application server
-* 1 application file (code base)
-* 1 database (MySQL)
-* 1 domain name foobar.com configed with a www record that points to your server IP 8.8.8.8
+* Server: This is a physical or virtual machine responsible for hosting all components of the web infrastructure.
 
-## Questions
+* Web Server (Nginx): Nginx will handle incoming HTTP requests and serve static content. It will also act as a reverse proxy to pass dynamic requests to the application server.
 
-* What is a server?
-    A server is a computer without a monitor.
-* What is the role of the domain name?
-    Human readable address to represent an IP Address
-* What type of DNS record www is in www.foobar.com?
-    A record!
-* What is the role of the web server?
-    Frontend show html and css
-* What is the role of the application server?
-    runs your base code
-* What is the role of the database
-    To pass data from storage to webserver through app server
-* What is the server using to communicate with the computer of the user requesting the website
-    The IP Address through the browser/internet
+* Application Server: This is where the dynamic code of the website runs. It interprets requests, processes them, and generates dynamic content to be sent back to the user. For simplicity, let's assume it's running a PHP application, which will be interpreted by PHP-FPM.
+* Application Files: This includes all the codebase of the website. For example, HTML, CSS, JavaScript, and PHP files.
+* Database (MySQL): MySQL will store and manage the website's data. This includes user accounts, articles, product details, etc.
 
-## What are the issues with this infrastructure?
+## Specifics Explained:
 
-* SPOF?
-    Single point of failure the server itself
-* Downtime when maintenace needed (like deploying new code web server needs to be restarted)?
-    everything oges down
-* Cannot scale if too much incoming traffic?
-    No because no load balancer
-[URL to design of one server web infrastructur](https://imgur.com/a/zje0cnu)
+* Server: A server is a computer system that provides resources, data, services, or programs to other computers or users over a network.
+* Domain Name: The domain name, in this case, foobar.com, serves as a human-readable address to access the website. It's translated to an IP address by the Domain Name System (DNS).
+* DNS Record: The www DNS record in www.foobar.com is a subdomain that points to the server's IP address (e.g., 8.8.8.8).
+* Web Server (Nginx): The web server handles incoming HTTP requests from clients (browsers) and serves static content. It also acts as a reverse proxy to forward dynamic requests to the application server.
+* Application Server: The application server executes the application code (e.g., PHP) in response to dynamic requests. It interacts with the database to retrieve or store data and generates dynamic content for the web server to serve.
+* Database: The database stores and manages the website's data. MySQL, in this case, handles tasks such as storing user information, product details, and other relevant data.
+* Communication: The server communicates with the user's computer over the internet using the HTTP(S) protocol. When a user requests the website www.foobar.com, their browser sends an HTTP request to the server's IP address. The server processes this request, retrieves necessary data from the database, executes any dynamic code, and sends back an HTTP response containing the requested webpage.
+
+##Issues with the Infrastructure:
+
+* Single Point of Failure (SPOF): Since all components are hosted on a single server, if the server fails, the entire website goes down.
+* Downtime during Maintenance: Performing maintenance tasks, such as deploying new code or restarting the web server, may lead to downtime, causing inconvenience to users.
+* Limited Scalability: If the website experiences a sudden surge in traffic, a single server may not be able to handle the load efficiently, leading to performance issues or downtime.
